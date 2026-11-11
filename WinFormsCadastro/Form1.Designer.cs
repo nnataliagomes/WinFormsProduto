@@ -1,6 +1,6 @@
 ﻿namespace WinFormsCadastro
 {
-    partial class grpPrecificacao
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             grpDados = new GroupBox();
-            lblCodigo = new Label();
-            txtCodigo = new TextBox();
-            lblNome = new Label();
-            lblCategoria = new Label();
-            lblFornecedor = new Label();
-            lblDescricao = new Label();
-            txtNomeProduto = new TextBox();
-            txtDescricao = new TextBox();
-            cmbCategoria = new ComboBox();
+            label3 = new Label();
+            label2 = new Label();
+            label4 = new Label();
             cmbFornecedor = new ComboBox();
+            cmbCategoria = new ComboBox();
+            txtDescricao = new TextBox();
+            txtNomeProduto = new TextBox();
+            lblDescricao = new Label();
+            lblFornecedor = new Label();
+            lblCategoria = new Label();
+            lblNome = new Label();
+            txtCodigo = new TextBox();
+            lblCodigo = new Label();
             groupBox1 = new GroupBox();
-            lblCusto = new Label();
-            lblStockMinimo = new Label();
-            lblVenda = new Label();
-            lblStockInicial = new Label();
-            lblMargem = new Label();
-            nudPrecoCusto = new NumericUpDown();
-            nudPrecoVenda = new NumericUpDown();
-            nudEstoqueMinimo = new NumericUpDown();
-            nudStocknicial = new NumericUpDown();
+            button1 = new Button();
             txtMargem = new TextBox();
+            nudStockInicial = new NumericUpDown();
+            nudStockMinimo = new NumericUpDown();
+            nudPrecoVenda = new NumericUpDown();
+            nudPrecoCusto = new NumericUpDown();
+            lblMargem = new Label();
+            lblStockInicial = new Label();
+            lblVenda = new Label();
+            lblStockMinimo = new Label();
+            lblCusto = new Label();
             lblData = new GroupBox();
-            chkProdutoAtivo = new CheckBox();
-            label1 = new Label();
             dtpDataCadastro = new DateTimePicker();
+            label1 = new Label();
+            chkProdutoAtivo = new CheckBox();
             btnNovo = new Button();
             btnExcluir = new Button();
             btnLimpar = new Button();
             btnSalvar = new Button();
-            label4 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
             grpDados.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nudPrecoCusto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudStockInicial).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudStockMinimo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudPrecoVenda).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudStocknicial).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrecoCusto).BeginInit();
             lblData.SuspendLayout();
             SuspendLayout();
             // 
@@ -87,119 +87,154 @@
             grpDados.Controls.Add(txtCodigo);
             grpDados.Controls.Add(lblCodigo);
             grpDados.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            grpDados.Location = new Point(12, 12);
+            grpDados.Location = new Point(10, 9);
+            grpDados.Margin = new Padding(3, 2, 3, 2);
             grpDados.Name = "grpDados";
-            grpDados.Size = new Size(812, 277);
+            grpDados.Padding = new Padding(3, 2, 3, 2);
+            grpDados.Size = new Size(710, 208);
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
             grpDados.Text = "Dados principais";
-            grpDados.Enter += grpDados_Enter;
             // 
-            // lblCodigo
+            // label3
             // 
-            lblCodigo.AutoSize = true;
-            lblCodigo.Font = new Font("Segoe UI", 9F);
-            lblCodigo.Location = new Point(16, 34);
-            lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(58, 20);
-            lblCodigo.TabIndex = 2;
-            lblCodigo.Text = "Código";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(84, 96);
+            label3.Name = "label3";
+            label3.Size = new Size(12, 15);
+            label3.TabIndex = 17;
+            label3.Text = "*";
             // 
-            // txtCodigo
+            // label2
             // 
-            txtCodigo.Font = new Font("Segoe UI", 9F);
-            txtCodigo.Location = new Point(16, 65);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(186, 27);
-            txtCodigo.TabIndex = 3;
-            txtCodigo.Text = "000000";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(306, 96);
+            label2.Name = "label2";
+            label2.Size = new Size(12, 15);
+            label2.TabIndex = 16;
+            label2.Text = "*";
             // 
-            // lblNome
+            // label4
             // 
-            lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 9F);
-            lblNome.Location = new Point(208, 34);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(129, 20);
-            lblNome.TabIndex = 4;
-            lblNome.Text = "Nome do Produto";
-            // 
-            // lblCategoria
-            // 
-            lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Segoe UI", 9F);
-            lblCategoria.Location = new Point(610, 34);
-            lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(74, 20);
-            lblCategoria.TabIndex = 6;
-            lblCategoria.Text = "Categoria";
-            lblCategoria.Click += lblCategoria_Click;
-            // 
-            // lblFornecedor
-            // 
-            lblFornecedor.AutoSize = true;
-            lblFornecedor.Font = new Font("Segoe UI", 9F);
-            lblFornecedor.Location = new Point(16, 129);
-            lblFornecedor.Name = "lblFornecedor";
-            lblFornecedor.Size = new Size(84, 20);
-            lblFornecedor.TabIndex = 7;
-            lblFornecedor.Text = "Fornecedor";
-            lblFornecedor.Click += label1_Click;
-            // 
-            // lblDescricao
-            // 
-            lblDescricao.AutoSize = true;
-            lblDescricao.Font = new Font("Segoe UI", 9F);
-            lblDescricao.Location = new Point(281, 129);
-            lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(74, 20);
-            lblDescricao.TabIndex = 8;
-            lblDescricao.Text = "Descrição";
-            // 
-            // txtNomeProduto
-            // 
-            txtNomeProduto.Font = new Font("Segoe UI", 9F);
-            txtNomeProduto.Location = new Point(208, 65);
-            txtNomeProduto.Name = "txtNomeProduto";
-            txtNomeProduto.Size = new Size(396, 27);
-            txtNomeProduto.TabIndex = 9;
-            txtNomeProduto.Text = "000000";
-            // 
-            // txtDescricao
-            // 
-            txtDescricao.Location = new Point(281, 155);
-            txtDescricao.Multiline = true;
-            txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(524, 104);
-            txtDescricao.TabIndex = 10;
-            txtDescricao.TextChanged += textBox2_TextChanged;
-            // 
-            // cmbCategoria
-            // 
-            cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Items.AddRange(new object[] { "Selecione...", "", "", "", "", "Alimentos", "", "", "", "", "Bebidas", "", "", "", "", "Eletrônicos", "", "", "", "", "Informática", "", "", "", "", "Limpeza", "", "", "", "", "Vestuário", "", "", "", "", "Outros" });
-            cmbCategoria.Location = new Point(610, 65);
-            cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(195, 36);
-            cmbCategoria.TabIndex = 11;
-            cmbCategoria.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(593, 25);
+            label4.Name = "label4";
+            label4.Size = new Size(12, 15);
+            label4.TabIndex = 15;
+            label4.Text = "*";
             // 
             // cmbFornecedor
             // 
             cmbFornecedor.Font = new Font("Segoe UI", 9F);
             cmbFornecedor.FormattingEnabled = true;
             cmbFornecedor.Items.AddRange(new object[] { "Selecione...", "", "", "", "", "Fornecedor A", "", "", "", "", "Fornecedor B", "", "", "", "", "Fornecedor C", "", "", "", "", "Fornecedor D" });
-            cmbFornecedor.Location = new Point(16, 155);
+            cmbFornecedor.Location = new Point(14, 116);
+            cmbFornecedor.Margin = new Padding(3, 2, 3, 2);
             cmbFornecedor.Name = "cmbFornecedor";
-            cmbFornecedor.Size = new Size(195, 28);
+            cmbFornecedor.Size = new Size(171, 23);
             cmbFornecedor.TabIndex = 12;
+            // 
+            // cmbCategoria
+            // 
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Items.AddRange(new object[] { "Selecione...", "", "", "", "", "Alimentos", "", "", "", "", "Bebidas", "", "", "", "", "Eletrônicos", "", "", "", "", "Informática", "", "", "", "", "Limpeza", "", "", "", "", "Vestuário", "", "", "", "", "Outros" });
+            cmbCategoria.Location = new Point(534, 49);
+            cmbCategoria.Margin = new Padding(3, 2, 3, 2);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(171, 29);
+            cmbCategoria.TabIndex = 11;
+            // 
+            // txtDescricao
+            // 
+            txtDescricao.Location = new Point(246, 116);
+            txtDescricao.Margin = new Padding(3, 2, 3, 2);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(459, 79);
+            txtDescricao.TabIndex = 10;
+            // 
+            // txtNomeProduto
+            // 
+            txtNomeProduto.Font = new Font("Segoe UI", 9F);
+            txtNomeProduto.Location = new Point(182, 49);
+            txtNomeProduto.Margin = new Padding(3, 2, 3, 2);
+            txtNomeProduto.Name = "txtNomeProduto";
+            txtNomeProduto.Size = new Size(347, 23);
+            txtNomeProduto.TabIndex = 9;
+            txtNomeProduto.Text = "000000";
+            // 
+            // lblDescricao
+            // 
+            lblDescricao.AutoSize = true;
+            lblDescricao.Font = new Font("Segoe UI", 9F);
+            lblDescricao.Location = new Point(246, 97);
+            lblDescricao.Name = "lblDescricao";
+            lblDescricao.Size = new Size(58, 15);
+            lblDescricao.TabIndex = 8;
+            lblDescricao.Text = "Descrição";
+            // 
+            // lblFornecedor
+            // 
+            lblFornecedor.AutoSize = true;
+            lblFornecedor.Font = new Font("Segoe UI", 9F);
+            lblFornecedor.Location = new Point(14, 97);
+            lblFornecedor.Name = "lblFornecedor";
+            lblFornecedor.Size = new Size(67, 15);
+            lblFornecedor.TabIndex = 7;
+            lblFornecedor.Text = "Fornecedor";
+            // 
+            // lblCategoria
+            // 
+            lblCategoria.AutoSize = true;
+            lblCategoria.Font = new Font("Segoe UI", 9F);
+            lblCategoria.Location = new Point(534, 26);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(58, 15);
+            lblCategoria.TabIndex = 6;
+            lblCategoria.Text = "Categoria";
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.Font = new Font("Segoe UI", 9F);
+            lblNome.Location = new Point(182, 26);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(103, 15);
+            lblNome.TabIndex = 4;
+            lblNome.Text = "Nome do Produto";
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Font = new Font("Segoe UI", 9F);
+            txtCodigo.Location = new Point(14, 49);
+            txtCodigo.Margin = new Padding(3, 2, 3, 2);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(163, 23);
+            txtCodigo.TabIndex = 3;
+            txtCodigo.Text = "000000";
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Segoe UI", 9F);
+            lblCodigo.Location = new Point(14, 26);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(46, 15);
+            lblCodigo.TabIndex = 2;
+            lblCodigo.Text = "Código";
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(txtMargem);
-            groupBox1.Controls.Add(nudStocknicial);
-            groupBox1.Controls.Add(nudEstoqueMinimo);
+            groupBox1.Controls.Add(nudStockInicial);
+            groupBox1.Controls.Add(nudStockMinimo);
             groupBox1.Controls.Add(nudPrecoVenda);
             groupBox1.Controls.Add(nudPrecoCusto);
             groupBox1.Controls.Add(lblMargem);
@@ -208,120 +243,130 @@
             groupBox1.Controls.Add(lblStockMinimo);
             groupBox1.Controls.Add(lblCusto);
             groupBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(12, 295);
+            groupBox1.Location = new Point(10, 221);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(439, 224);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(384, 168);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Precificação e Estoque";
-            groupBox1.Enter += groupBox1_Enter;
             // 
-            // lblCusto
+            // button1
             // 
-            lblCusto.AutoSize = true;
-            lblCusto.Font = new Font("Segoe UI", 9F);
-            lblCusto.Location = new Point(6, 50);
-            lblCusto.Name = "lblCusto";
-            lblCusto.Size = new Size(139, 20);
-            lblCusto.TabIndex = 0;
-            lblCusto.Text = "Preço de Custo (R$)";
-            lblCusto.Click += label1_Click_1;
+            button1.Location = new Point(181, 166);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 10;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // lblStockMinimo
+            // txtMargem
             // 
-            lblStockMinimo.AutoSize = true;
-            lblStockMinimo.Font = new Font("Segoe UI", 9F);
-            lblStockMinimo.Location = new Point(248, 136);
-            lblStockMinimo.Name = "lblStockMinimo";
-            lblStockMinimo.Size = new Size(100, 20);
-            lblStockMinimo.TabIndex = 1;
-            lblStockMinimo.Text = "Stock Mínimo";
+            txtMargem.Font = new Font("Segoe UI", 9F);
+            txtMargem.Location = new Point(133, 66);
+            txtMargem.Margin = new Padding(3, 2, 3, 2);
+            txtMargem.Name = "txtMargem";
+            txtMargem.ReadOnly = true;
+            txtMargem.ScrollBars = ScrollBars.Horizontal;
+            txtMargem.Size = new Size(68, 23);
+            txtMargem.TabIndex = 9;
+            txtMargem.Text = "0,00";
             // 
-            // lblVenda
+            // nudStockInicial
             // 
-            lblVenda.AutoSize = true;
-            lblVenda.Font = new Font("Segoe UI", 9F);
-            lblVenda.Location = new Point(251, 52);
-            lblVenda.Name = "lblVenda";
-            lblVenda.Size = new Size(112, 20);
-            lblVenda.TabIndex = 2;
-            lblVenda.Text = "Preço de Venda";
-            lblVenda.Click += label3_Click;
+            nudStockInicial.Font = new Font("Segoe UI", 9F);
+            nudStockInicial.Location = new Point(133, 99);
+            nudStockInicial.Margin = new Padding(3, 2, 3, 2);
+            nudStockInicial.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            nudStockInicial.Name = "nudStockInicial";
+            nudStockInicial.Size = new Size(67, 23);
+            nudStockInicial.TabIndex = 8;
             // 
-            // lblStockInicial
+            // nudStockMinimo
             // 
-            lblStockInicial.AutoSize = true;
-            lblStockInicial.Font = new Font("Segoe UI", 9F);
-            lblStockInicial.Location = new Point(6, 132);
-            lblStockInicial.Name = "lblStockInicial";
-            lblStockInicial.Size = new Size(88, 20);
-            lblStockInicial.TabIndex = 3;
-            lblStockInicial.Text = "Stock Inicial";
-            lblStockInicial.Click += label4_Click;
-            // 
-            // lblMargem
-            // 
-            lblMargem.AutoSize = true;
-            lblMargem.Font = new Font("Segoe UI", 9F);
-            lblMargem.Location = new Point(6, 88);
-            lblMargem.Name = "lblMargem";
-            lblMargem.Size = new Size(96, 20);
-            lblMargem.TabIndex = 4;
-            lblMargem.Text = "Margem (R$)";
-            lblMargem.Click += label5_Click;
-            // 
-            // nudPrecoCusto
-            // 
-            nudPrecoCusto.DecimalPlaces = 2;
-            nudPrecoCusto.Font = new Font("Segoe UI", 9F);
-            nudPrecoCusto.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            nudPrecoCusto.Location = new Point(152, 48);
-            nudPrecoCusto.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
-            nudPrecoCusto.Name = "nudPrecoCusto";
-            nudPrecoCusto.Size = new Size(77, 27);
-            nudPrecoCusto.TabIndex = 5;
+            nudStockMinimo.Font = new Font("Segoe UI", 9F);
+            nudStockMinimo.Location = new Point(312, 100);
+            nudStockMinimo.Margin = new Padding(3, 2, 3, 2);
+            nudStockMinimo.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            nudStockMinimo.Name = "nudStockMinimo";
+            nudStockMinimo.Size = new Size(64, 23);
+            nudStockMinimo.TabIndex = 7;
             // 
             // nudPrecoVenda
             // 
             nudPrecoVenda.DecimalPlaces = 2;
             nudPrecoVenda.Font = new Font("Segoe UI", 9F);
             nudPrecoVenda.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            nudPrecoVenda.Location = new Point(372, 50);
+            nudPrecoVenda.Location = new Point(326, 38);
+            nudPrecoVenda.Margin = new Padding(3, 2, 3, 2);
             nudPrecoVenda.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
             nudPrecoVenda.Name = "nudPrecoVenda";
-            nudPrecoVenda.Size = new Size(57, 27);
+            nudPrecoVenda.Size = new Size(50, 23);
             nudPrecoVenda.TabIndex = 6;
-            nudPrecoVenda.ValueChanged += numericUpDown2_ValueChanged;
             // 
-            // nudEstoqueMinimo
+            // nudPrecoCusto
             // 
-            nudEstoqueMinimo.Font = new Font("Segoe UI", 9F);
-            nudEstoqueMinimo.Location = new Point(356, 134);
-            nudEstoqueMinimo.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            nudEstoqueMinimo.Name = "nudEstoqueMinimo";
-            nudEstoqueMinimo.Size = new Size(73, 27);
-            nudEstoqueMinimo.TabIndex = 7;
-            nudEstoqueMinimo.ValueChanged += numericUpDown3_ValueChanged;
+            nudPrecoCusto.DecimalPlaces = 2;
+            nudPrecoCusto.Font = new Font("Segoe UI", 9F);
+            nudPrecoCusto.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            nudPrecoCusto.Location = new Point(133, 36);
+            nudPrecoCusto.Margin = new Padding(3, 2, 3, 2);
+            nudPrecoCusto.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            nudPrecoCusto.Name = "nudPrecoCusto";
+            nudPrecoCusto.Size = new Size(67, 23);
+            nudPrecoCusto.TabIndex = 5;
             // 
-            // nudStocknicial
+            // lblMargem
             // 
-            nudStocknicial.Font = new Font("Segoe UI", 9F);
-            nudStocknicial.Location = new Point(152, 132);
-            nudStocknicial.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            nudStocknicial.Name = "nudStocknicial";
-            nudStocknicial.Size = new Size(77, 27);
-            nudStocknicial.TabIndex = 8;
+            lblMargem.AutoSize = true;
+            lblMargem.Font = new Font("Segoe UI", 9F);
+            lblMargem.Location = new Point(5, 66);
+            lblMargem.Name = "lblMargem";
+            lblMargem.Size = new Size(76, 15);
+            lblMargem.TabIndex = 4;
+            lblMargem.Text = "Margem (R$)";
             // 
-            // txtMargem
+            // lblStockInicial
             // 
-            txtMargem.Font = new Font("Segoe UI", 9F);
-            txtMargem.Location = new Point(152, 88);
-            txtMargem.Name = "txtMargem";
-            txtMargem.ReadOnly = true;
-            txtMargem.ScrollBars = ScrollBars.Horizontal;
-            txtMargem.Size = new Size(77, 27);
-            txtMargem.TabIndex = 9;
-            txtMargem.Text = "0,00";
+            lblStockInicial.AutoSize = true;
+            lblStockInicial.Font = new Font("Segoe UI", 9F);
+            lblStockInicial.Location = new Point(5, 99);
+            lblStockInicial.Name = "lblStockInicial";
+            lblStockInicial.Size = new Size(70, 15);
+            lblStockInicial.TabIndex = 3;
+            lblStockInicial.Text = "Stock Inicial";
+            // 
+            // lblVenda
+            // 
+            lblVenda.AutoSize = true;
+            lblVenda.Font = new Font("Segoe UI", 9F);
+            lblVenda.Location = new Point(220, 39);
+            lblVenda.Name = "lblVenda";
+            lblVenda.Size = new Size(88, 15);
+            lblVenda.TabIndex = 2;
+            lblVenda.Text = "Preço de Venda";
+            // 
+            // lblStockMinimo
+            // 
+            lblStockMinimo.AutoSize = true;
+            lblStockMinimo.Font = new Font("Segoe UI", 9F);
+            lblStockMinimo.Location = new Point(217, 102);
+            lblStockMinimo.Name = "lblStockMinimo";
+            lblStockMinimo.Size = new Size(81, 15);
+            lblStockMinimo.TabIndex = 1;
+            lblStockMinimo.Text = "Stock Mínimo";
+            // 
+            // lblCusto
+            // 
+            lblCusto.AutoSize = true;
+            lblCusto.Font = new Font("Segoe UI", 9F);
+            lblCusto.Location = new Point(5, 38);
+            lblCusto.Name = "lblCusto";
+            lblCusto.Size = new Size(111, 15);
+            lblCusto.TabIndex = 0;
+            lblCusto.Text = "Preço de Custo (R$)";
             // 
             // lblData
             // 
@@ -329,36 +374,14 @@
             lblData.Controls.Add(label1);
             lblData.Controls.Add(chkProdutoAtivo);
             lblData.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblData.Location = new Point(457, 295);
+            lblData.Location = new Point(400, 221);
+            lblData.Margin = new Padding(3, 2, 3, 2);
             lblData.Name = "lblData";
-            lblData.Size = new Size(360, 224);
+            lblData.Padding = new Padding(3, 2, 3, 2);
+            lblData.Size = new Size(315, 168);
             lblData.TabIndex = 3;
             lblData.TabStop = false;
             lblData.Text = "Situação / Detalhes";
-            lblData.Enter += groupBox2_Enter;
-            // 
-            // chkProdutoAtivo
-            // 
-            chkProdutoAtivo.AutoSize = true;
-            chkProdutoAtivo.Checked = true;
-            chkProdutoAtivo.CheckState = CheckState.Checked;
-            chkProdutoAtivo.Font = new Font("Segoe UI", 9F);
-            chkProdutoAtivo.Location = new Point(36, 67);
-            chkProdutoAtivo.Name = "chkProdutoAtivo";
-            chkProdutoAtivo.Size = new Size(123, 24);
-            chkProdutoAtivo.TabIndex = 0;
-            chkProdutoAtivo.Text = "Produto Ativo";
-            chkProdutoAtivo.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F);
-            label1.Location = new Point(34, 132);
-            label1.Name = "label1";
-            label1.Size = new Size(125, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Data de Cadastro";
             // 
             // dtpDataCadastro
             // 
@@ -366,22 +389,48 @@
             dtpDataCadastro.CalendarTitleBackColor = SystemColors.ButtonShadow;
             dtpDataCadastro.Font = new Font("Segoe UI", 9F);
             dtpDataCadastro.Format = DateTimePickerFormat.Short;
-            dtpDataCadastro.Location = new Point(37, 166);
+            dtpDataCadastro.Location = new Point(32, 124);
+            dtpDataCadastro.Margin = new Padding(3, 2, 3, 2);
             dtpDataCadastro.Name = "dtpDataCadastro";
             dtpDataCadastro.RightToLeft = RightToLeft.No;
-            dtpDataCadastro.Size = new Size(250, 27);
+            dtpDataCadastro.Size = new Size(219, 23);
             dtpDataCadastro.TabIndex = 2;
             dtpDataCadastro.UseWaitCursor = true;
             dtpDataCadastro.Value = new DateTime(2026, 11, 10, 20, 58, 10, 0);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F);
+            label1.Location = new Point(30, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Data de Cadastro";
+            // 
+            // chkProdutoAtivo
+            // 
+            chkProdutoAtivo.AutoSize = true;
+            chkProdutoAtivo.Checked = true;
+            chkProdutoAtivo.CheckState = CheckState.Checked;
+            chkProdutoAtivo.Font = new Font("Segoe UI", 9F);
+            chkProdutoAtivo.Location = new Point(32, 50);
+            chkProdutoAtivo.Margin = new Padding(3, 2, 3, 2);
+            chkProdutoAtivo.Name = "chkProdutoAtivo";
+            chkProdutoAtivo.Size = new Size(100, 19);
+            chkProdutoAtivo.TabIndex = 0;
+            chkProdutoAtivo.Text = "Produto Ativo";
+            chkProdutoAtivo.UseVisualStyleBackColor = true;
             // 
             // btnNovo
             // 
             btnNovo.BackColor = SystemColors.ButtonShadow;
             btnNovo.FlatStyle = FlatStyle.System;
             btnNovo.ForeColor = SystemColors.ActiveCaptionText;
-            btnNovo.Location = new Point(175, 543);
+            btnNovo.Location = new Point(153, 407);
+            btnNovo.Margin = new Padding(3, 2, 3, 2);
             btnNovo.Name = "btnNovo";
-            btnNovo.Size = new Size(112, 40);
+            btnNovo.Size = new Size(98, 30);
             btnNovo.TabIndex = 4;
             btnNovo.Text = "Novo";
             btnNovo.UseVisualStyleBackColor = false;
@@ -391,9 +440,10 @@
             btnExcluir.BackColor = SystemColors.ButtonShadow;
             btnExcluir.FlatStyle = FlatStyle.System;
             btnExcluir.ForeColor = SystemColors.ActiveCaptionText;
-            btnExcluir.Location = new Point(513, 543);
+            btnExcluir.Location = new Point(449, 407);
+            btnExcluir.Margin = new Padding(3, 2, 3, 2);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(113, 39);
+            btnExcluir.Size = new Size(99, 29);
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
@@ -403,9 +453,10 @@
             btnLimpar.BackColor = SystemColors.ButtonShadow;
             btnLimpar.FlatStyle = FlatStyle.System;
             btnLimpar.ForeColor = SystemColors.ActiveCaptionText;
-            btnLimpar.Location = new Point(404, 543);
+            btnLimpar.Location = new Point(354, 407);
+            btnLimpar.Margin = new Padding(3, 2, 3, 2);
             btnLimpar.Name = "btnLimpar";
-            btnLimpar.Size = new Size(103, 39);
+            btnLimpar.Size = new Size(90, 29);
             btnLimpar.TabIndex = 6;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = false;
@@ -415,60 +466,19 @@
             btnSalvar.BackColor = SystemColors.ButtonShadow;
             btnSalvar.FlatStyle = FlatStyle.System;
             btnSalvar.ForeColor = SystemColors.ActiveCaptionText;
-            btnSalvar.Location = new Point(293, 543);
+            btnSalvar.Location = new Point(256, 407);
+            btnSalvar.Margin = new Padding(3, 2, 3, 2);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(105, 39);
+            btnSalvar.Size = new Size(92, 29);
             btnSalvar.TabIndex = 7;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // Form1
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(678, 33);
-            label4.Name = "label4";
-            label4.Size = new Size(16, 20);
-            label4.TabIndex = 15;
-            label4.Text = "*";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(350, 128);
-            label2.Name = "label2";
-            label2.Size = new Size(16, 20);
-            label2.TabIndex = 16;
-            label2.Text = "*";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Red;
-            label3.Location = new Point(96, 128);
-            label3.Name = "label3";
-            label3.Size = new Size(16, 20);
-            label3.TabIndex = 17;
-            label3.Text = "*";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(207, 222);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 10;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // grpPrecificacao
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(831, 595);
+            ClientSize = new Size(727, 446);
             Controls.Add(btnSalvar);
             Controls.Add(btnLimpar);
             Controls.Add(btnExcluir);
@@ -476,17 +486,18 @@
             Controls.Add(lblData);
             Controls.Add(groupBox1);
             Controls.Add(grpDados);
-            Name = "grpPrecificacao";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             grpDados.ResumeLayout(false);
             grpDados.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nudPrecoCusto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudStockInicial).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudStockMinimo).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudPrecoVenda).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudStocknicial).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrecoCusto).EndInit();
             lblData.ResumeLayout(false);
             lblData.PerformLayout();
             ResumeLayout(false);
@@ -510,8 +521,8 @@
         private Label lblVenda;
         private Label lblStockMinimo;
         private Label lblCusto;
-        private NumericUpDown nudStocknicial;
-        private NumericUpDown nudEstoqueMinimo;
+        private NumericUpDown nudStockInicial;
+        private NumericUpDown nudStockMinimo;
         private NumericUpDown nudPrecoVenda;
         private NumericUpDown nudPrecoCusto;
         private TextBox txtMargem;
